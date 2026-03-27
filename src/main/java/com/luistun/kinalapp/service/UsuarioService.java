@@ -134,7 +134,7 @@ public class UsuarioService implements IUsuarioService {
     public List<Usuario> listarActivos() {
         List<Usuario> usuarios = usuarioRepository.findAll();
         List<Usuario> activos = new ArrayList<>();
-        //for-if me sirve para poder ver la lista de activoz 
+        //for-if me sirve para poder ver la lista de activoz
         for (Usuario usuario : usuarios) {
             if (usuario.getEstado() == 1) {
                 activos.add(usuario);
