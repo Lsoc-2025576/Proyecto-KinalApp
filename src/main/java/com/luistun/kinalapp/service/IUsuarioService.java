@@ -43,5 +43,5 @@ public interface IUsuarioService {
 
     //List muestra la lista de usuarios activos
     List<Usuario> listarActivos();
-    
+
 }
