@@ -21,14 +21,15 @@ public class Venta {
     @Column(name = "estado")
     private int estado;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     //le dice a JPA que muchas ventas pueden pertenecer a un mismo cliente
     @JoinColumn(name = "Clientes_dpi_cliente")
     //JoinColumn quiere decir que es exactamente qué columna de la tabla ventas es la llave foránea
     // El name debe coincidir exactamente con el nombre de la columna en la BD
     private Cliente cliente;
 
-    @ManyToOne
+    //(fetch = FetchType.LAZY) o "perezosa" trae el objeto principal, no trae los datos de las relaciones automaticamente
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "Usuarios_codigo_usuario")
     private Usuario usuario;
 
