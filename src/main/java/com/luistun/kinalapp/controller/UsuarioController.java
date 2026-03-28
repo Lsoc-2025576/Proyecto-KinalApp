@@ -85,8 +85,6 @@ public class UsuarioController {
     }
 
 
-
-
     //DELETE ilimina un usuario
     @DeleteMapping("/{codigo}")
     public ResponseEntity<Void> eliminar(@PathVariable int codigo) {
