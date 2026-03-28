@@ -113,5 +113,6 @@ public class UsuarioController {
         // 200 con la lista de activos
         return ResponseEntity.ok(activos);
     }
+
 }
 
